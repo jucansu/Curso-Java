@@ -2,6 +2,8 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public abstract class Persona implements Comparable<Persona>, Cotizable {
 	// Atributos
@@ -12,6 +14,9 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 	private LocalDate anhoInicio;
 	private int anhoJubilacion;
 	private TipoContrato tipoContrato;
+
+	private final static Logger LOGGER = Logger.getLogger(Persona.class.getName());
+
 
 	// Constructor
 	public Persona(String string, String string2, String string3, int i, LocalDate localDate, int j,
@@ -24,6 +29,9 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		this.anhoInicio = localDate;
 		this.anhoJubilacion = j;
 		this.tipoContrato = contrato;
+		//logger
+		LOGGER.log(Level.INFO, "prueba");
+		LOGGER.log(Level.WARNING, "Cuidado");
 	}
 
 	public Persona() {
@@ -46,7 +54,6 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		this.apellidos = apellidos;
 	}
 
-	
 	public String getDni() throws DNINoValidoException {
 		checkDNI(dni);
 		return dni;
@@ -114,8 +121,6 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		return res;
 	}
 
-	
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -141,7 +146,6 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		return true;
 	}
 
-
 	public TipoContrato getTipoContrato() {
 		return tipoContrato;
 	}
@@ -163,21 +167,21 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 
 		return res;
 	}
-	
+
 	private void checkDNI(String dni) throws DNINoValidoException {
-		final String letra= "TRWAGMYFPDXBNJZSQVHLCKE";
-		
-		if(dni.length()!=9 || Character.isLetter(this.dni.charAt(8))==false  ) {
+		final String letra = "TRWAGMYFPDXBNJZSQVHLCKE";
+
+		if (dni.length() != 9 || Character.isLetter(this.dni.charAt(8)) == false) {
 			throw new DNINoValidoException("DNI no válido");
 		}
-		Integer valor= new Integer(dni.substring(0, 8));
-		int aux= valor%23;
+		Integer valor = new Integer(dni.substring(0, 8));
+		int aux = valor % 23;
 		Character letraReal = dni.charAt(8);
-		Character letraCalculada= letra.charAt(aux);
-		if(!letraReal.equals(letraCalculada)) {
+		Character letraCalculada = letra.charAt(aux);
+		if (!letraReal.equals(letraCalculada)) {
 			throw new DNINoValidoException("DNI no válido");
 		}
-		
+
 	}
 
 	@Override
@@ -190,6 +194,5 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		}
 		return null;
 	}
-	
 
 }

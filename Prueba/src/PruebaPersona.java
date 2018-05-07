@@ -2,9 +2,13 @@ import java.awt.List;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.TreeSet;
+import java.util.logging.Logger;
+
 import static java.util.Arrays.asList;
 
 public class PruebaPersona {
+	
+	private final static Logger LOGGER = Logger.getLogger(Persona.class.getName());
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.of(1989, 11, 11);
 		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL, null, 0);
@@ -56,13 +60,13 @@ public class PruebaPersona {
 		GestorPersonas g1 = GestorPersonas.getInstancia();
 		g1.setPersonas(personas10000);
 		
-		Long time_start= System.currentTimeMillis();
-		System.out.println("tiempo inicio:"+time_start);
-		g1.filtraMas40Con();
-		Long time_final= System.currentTimeMillis();
-		System.out.println("tiempo final:"+time_final);
-
-	System.out.println(time_final-time_start);
+//		Long time_start= System.currentTimeMillis();
+//		System.out.println("tiempo inicio:"+time_start);
+//		g1.filtraMas40Con();
+//		Long time_final= System.currentTimeMillis();
+//		System.out.println("tiempo final:"+time_final);
+//
+//	System.out.println(time_final-time_start);
 		
 
 
@@ -94,7 +98,10 @@ public class PruebaPersona {
 		//g.masMayorSinJubilar();
 		//System.out.println(g1.filtraMas40Con());
 		//System.out.println(g1.filtraMas40Sin());
-		
+	
+		for(Persona p: personas) {
+		System.out.println(p);
+		}
 		
 	}
 
