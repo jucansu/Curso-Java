@@ -1,4 +1,17 @@
 /Conserjeria.class
+/Contador.class
+/Cotizable.class
+/DNIDuplicadoException.class
+/DNINoValidoException.class
+/EmpleadoJubilado.class
+/EmpleadoPublico.class
 /Ficheros.class
+/GestorPersonas.class
+/HolaMundo.class
+/Java.txt
 /LineaEntrada.class
+/Persona.class
+/Prueba.class
+/PruebaPersona.class
 /Puesto.class
+/TipoContrato.class
