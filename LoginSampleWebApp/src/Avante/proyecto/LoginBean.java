@@ -1,4 +1,4 @@
-package AvanteProyecto;
+package Avante.proyecto;
 
 public class LoginBean {
 	private String userName;

@@ -13,17 +13,15 @@
 <c:set var="displayForm" value="${true}"/>
 <c:if test="${\"POST\".equalsIgnoreCase(pageContext.request.method)
 && pageContext.request.getParameter(\"submit\") != null}">
-  <jsp:useBean id="loginBean" class="AvanteProyecto.LoginBean">
+  <jsp:useBean id="loginBean" class="Avante.proyecto.LoginBean">
     <jsp:setProperty name="loginBean" property="*"/>
   </jsp:useBean>
   <c:choose>
     <c:when test="${!loginBean.isValidUser()}">
-      <c:set var="errMsg" value="Invalid user id or password. Please try again"/>
+      <c:set var="errMsg" value="Usuario invalido o cnotraseña. Intentelo otra vez"/>
     </c:when>
     <c:otherwise>
-    <h2><c:out value="Welcome admin !"/></h2>
-      <c:out value="You are successfully logged in"/>
-      <c:set var="displayForm" value="${false}"/>
+    <% response.sendRedirect("IniciaApp"); %>
     </c:otherwise>
   </c:choose>
 </c:if>
