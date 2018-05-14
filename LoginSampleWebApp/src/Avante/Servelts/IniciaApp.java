@@ -48,10 +48,10 @@ public class IniciaApp extends HttpServlet {
 			throws ServletException, IOException {
 		GestorPersonas g = GestorPersonas.getInstancia();
 		LocalDate date = LocalDate.of(1989, 11, 11);
-		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL,
+		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL,"admin","admin",
 				null, 0);
 		EmpleadoPublico p1 = new EmpleadoPublico("juan", "sanchez", "50440596D", 55, date, 2050,
-				TipoContrato.INDEFINIDO, null, 0);
+				TipoContrato.INDEFINIDO,"admin","admin", null, 0);
 		List<Persona> lista = new ArrayList<Persona>();
 		for (int i = 0; i < 50; i++) {
 			lista.add(p0);

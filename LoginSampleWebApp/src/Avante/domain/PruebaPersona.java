@@ -13,22 +13,22 @@ public class PruebaPersona {
 	private final static Logger LOGGER = Logger.getLogger(Persona.class.getName());
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.of(1989, 11, 11);
-		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p1 = new EmpleadoPublico("juan", "sanchez", "50440596D", 55, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p2 = new EmpleadoPublico("david", "austero", "63613182N", 25, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p3 = new EmpleadoPublico("laura", "sanchez", "36250153Z", 64, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p4 = new EmpleadoPublico("antonio", "sanchez", "60128157Q", 19, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p5 = new EmpleadoPublico("juan423", "austero", "42713209R", 44, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p6 = new EmpleadoPublico("pepe234", "martin", "94004864T", 29, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p7 = new EmpleadoPublico("juan444", "sanchez", "76360988E", 32, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p8 = new EmpleadoPublico("pepe55", "sanchez", "98841747Y", 35, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p9 = new EmpleadoPublico("juan66", "sanchez", "66071557D", 65, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p10 = new EmpleadoPublico("pepe667", "martin", "07212637K", 25, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p11 = new EmpleadoPublico("juan88", "martin", "23029718W", 29, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p12 = new EmpleadoPublico("pepe888", "martin", "13469282E", 17, date, 2050, TipoContrato.TEMPORAL, null, 0);
-		EmpleadoPublico p13 = new EmpleadoPublico("juan99", "martin", "24397017C", 80, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico p14 = new EmpleadoPublico("juan169", "martin", "12456786D", 49, date, 2050, TipoContrato.INDEFINIDO, null, 0);
-		EmpleadoPublico pIgual = new EmpleadoPublico("bu", "carmona", "12456786D", 49, date, 2050, TipoContrato.INDEFINIDO, null, 0);
+		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p1 = new EmpleadoPublico("juan", "sanchez", "50440596D", 55, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p2 = new EmpleadoPublico("david", "austero", "63613182N", 25, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p3 = new EmpleadoPublico("laura", "sanchez", "36250153Z", 64, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p4 = new EmpleadoPublico("antonio", "sanchez", "60128157Q", 19, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p5 = new EmpleadoPublico("juan423", "austero", "42713209R", 44, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p6 = new EmpleadoPublico("pepe234", "martin", "94004864T", 29, date, 2050, TipoContrato.TEMPORAL, "admin","admin",null, 0);
+		EmpleadoPublico p7 = new EmpleadoPublico("juan444", "sanchez", "76360988E", 32, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p8 = new EmpleadoPublico("pepe55", "sanchez", "98841747Y", 35, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p9 = new EmpleadoPublico("juan66", "sanchez", "66071557D", 65, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p10 = new EmpleadoPublico("pepe667", "martin", "07212637K", 25, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p11 = new EmpleadoPublico("juan88", "martin", "23029718W", 29, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p12 = new EmpleadoPublico("pepe888", "martin", "13469282E", 17, date, 2050, TipoContrato.TEMPORAL,"admin","admin", null, 0);
+		EmpleadoPublico p13 = new EmpleadoPublico("juan99", "martin", "24397017C", 80, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico p14 = new EmpleadoPublico("juan169", "martin", "12456786D", 49, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
+		EmpleadoPublico pIgual = new EmpleadoPublico("bu", "carmona", "12456786D", 49, date, 2050, TipoContrato.INDEFINIDO,"admin","admin", null, 0);
 		
 		ArrayList<Persona> personas = new ArrayList<Persona>();
 		
@@ -111,7 +111,7 @@ public class PruebaPersona {
 		LocalDate date = LocalDate.of(1989, 11, 11);
 
 		try (EmpleadoPublico e = new EmpleadoPublico("pepe", "sanchez", "224083J", 25, date, 2050,
-				TipoContrato.TEMPORAL, null, 0)) {
+				TipoContrato.TEMPORAL,"admin","admin", null, 0)) {
 			System.out.println(e);
 		} catch (Exception e) {
 

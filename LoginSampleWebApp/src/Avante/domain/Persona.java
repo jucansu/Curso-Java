@@ -12,13 +12,15 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 	private LocalDate anhoInicio;
 	private int anhoJubilacion;
 	private TipoContrato tipoContrato;
+	private String password;
+	private String user;
 
 	private final static Logger LOGGER = Logger.getLogger(Persona.class.getName());
 
 
 	// Constructor
 	public Persona(String string, String string2, String string3, int i, LocalDate localDate, int j,
-			TipoContrato contrato) {
+			TipoContrato contrato,String password,String user) {
 		super();
 		this.nombre = string;
 		this.apellidos = string2;
@@ -27,10 +29,13 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 		this.anhoInicio = localDate;
 		this.anhoJubilacion = j;
 		this.tipoContrato = contrato;
+		this.user=user;
+		this.password=password;
 		//logger
 		LOGGER.log(Level.INFO, "prueba");
 		LOGGER.log(Level.WARNING, "Cuidado");
 	}
+	
 
 	public Persona() {
 		super();
@@ -191,6 +196,22 @@ public abstract class Persona implements Comparable<Persona>, Cotizable {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 }

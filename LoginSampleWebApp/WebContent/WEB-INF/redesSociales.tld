@@ -1,0 +1,21 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>Twitter TLD</short-name>
+	<tag>
+		<name>Twitter</name>
+		<tag-class>Avante.proyecto.TwitterTag</tag-class>
+			<body-content>scriptless</body-content>
+			<atribute>
+			<name>message</name>
+			</atribute>
+			<atribute>
+			<name>url</name>
+			</atribute>
+			<atribute>
+			<name></name>
+			</atribute>
+			
+	</tag>
+	
+</taglib>

@@ -51,20 +51,18 @@ public class Inicio extends HttpServlet {
 		GestorPersonas g = GestorPersonas.getInstancia();
 		LocalDate date = LocalDate.of(1989, 11, 11);
 		EmpleadoPublico p0 = new EmpleadoPublico("pepe", "sanchez", "30224083J", 25, date, 2050, TipoContrato.TEMPORAL,
-				null, 0);
+				"admin", "admin", null, 0);
 		EmpleadoPublico p1 = new EmpleadoPublico("juan", "sanchez", "50440596D", 55, date, 2050,
-				TipoContrato.INDEFINIDO, null, 0);
+				TipoContrato.INDEFINIDO, "user", "user", null, 0);
 		List<Persona> lista = new ArrayList<Persona>();
-		
-			lista.add(p0);
-			lista.add(p1);
-		
+
+		lista.add(p0);
+		lista.add(p1);
+
 		g.setPersonas(lista);
-		
-		HttpSession session;
-		
-		request.setAttribute("listaP", g.getPersonas());
-		request.getRequestDispatcher("ejercicio8.jsp").forward(request, response);
+
+		request.getSession().setAttribute("listaP", g.getPersonas());
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 
 	}
 

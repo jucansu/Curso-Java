@@ -21,6 +21,7 @@ public class LoginBean {
 	}
 
 	public boolean isValidUser() {
+		
 		 return "admin".equals(this.userName) && "admin".equals(this.password);
 	}
 }

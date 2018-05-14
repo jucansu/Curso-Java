@@ -11,12 +11,14 @@
 <title>Insert title here</title>
 </head>
 <%
-	List<Persona> lista = (List<Persona>) request.getAttribute("listaP");
-	if (!session.getAttribute("MyAppOperator").equals("admin")) {
+	List<Persona> lista = (List<Persona>) request.getSession().getAttribute("listaP");
 
-		session.setAttribute("MyAppOperator", "admin");
+	for (Persona p : lista) {
+		if (p.getUser().equals(request.getSession().getAttribute("userName"))
+				&& p.getPassword().equals(request.getSession().getAttribute("password"))) {
+
+		}
 	}
-	
 %>
 <body>
 
